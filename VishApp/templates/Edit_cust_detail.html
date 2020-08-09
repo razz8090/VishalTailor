@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'vishalTailorsapp/css/costomercss.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+ <div class="div3">
+	<form action="/cust_update/?id={{cust.invoice}}" method="POST">
+	 <h1 align="center">new customer detailse</h1>
+		<div class="container">
+		<div id="div1">
+			<table>
+				<h3>SHIRT</h3><h4>{{shirt.invoice_s}}</h4>
+				
+				<tr>
+					<td><input type="text" name="L1" value="{{shirt.sl}}" maxlength="5" size="4" required></td>
+				</tr>
+					<td><input type="text" name="M1" value="{{shirt.sm1}}" maxlength="5" size="4"required></td>
+				<tr>
+					<td><input type="text" name="S1" value="{{shirt.ss}}" maxlength="5" size="4"required></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="B1" value="{{shirt.sb}}" maxlength="5" size="4"required></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="M2" value="{{shirt.sm2}}" maxlength="5" size="4" required></td>
+				</tr>
+				<tr>
+                                        <td><input type="text" name="types" value="{{shirt.s_type}}" required></td>
+				</tr>
+			</table>
+		</div>
+		<div id="div5">
+			<table>
+				<h3>PANT</h3><h4>{{pant.invoice_p}}</h4>
+				
+				<tr>
+					<td><input type="text" name="L2" value="{{pant.pl}}" maxlength="5" size="4" required></td>
+				</tr>
+					<td><input type="text" name="K2" value="{{pant.p_k}}" maxlength="5" size="4" required></td>
+				<tr>
+					<td><input type="text" name="H1" value="{{pant.ph1}}" maxlength="5" size="4" required></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="G1" value="{{pant.pg}}" maxlength="5" size="4"></td>
+				</tr>
+				<tr>
+					<td><input type="text"  name="H3" value="{{pant.ph2}}" maxlength="5" size="4" required></td>
+				</tr>
+				<tr>
+                                        <td><input type="text" name="typep" value="{{pant.p_type}}"></td>
+				</tr>
+			</table>
+		</div>
+		</div>
+		<div id="div4">
+			<table>
+				<fieldset>
+					<legend align="center">Recipt</legend>
+					<h2 align="center">Vishal Tailor</h2>
+					<t>Nmae</t><input type="text" name="name" id="paid" id="comments" value="{{cust.name}}"><h4>{{cust.invoice}}</h4>
+					<br/>
+					<h4>Date:{{cust.oder_date|date:"d-m-Y"}}</h4>
+					<t>Shirt</t>
+					<input type="text" id="paid" name="shirt" maxlenth="2" size="1" value="{{cust.shirt}}" required>
+					<t>Pant</t>
+					<input type="text" id="paid" name="pant" maxlenth="2" size="1" VALUE="{{cust.pant}}"><br>
+					<t>Total Amount</t>
+					<input type="text" id="Tamount" name="toal" maxlength="6" value="{{cust.Total_amount}}" required><br/>
+					<t>Date</t><input type="date" id="paid" name="rdate" value="{{cust.delevery_date|date:"Y-m-d"}}"  required><br>
+					<t>Paid</t><input name="paid" id="paid" text="text" maxlenth="5" size="5" value="{{cust.recived_amount}}" required>
+					<t>Remaining amount</t><input name="remainingAmount" id="paid" text="text" maxlenth="5" size="5" value="{{cust.rem_amount}}" required>
+ 				</fieldset>
+			</table>
+		</div>
+		<input type="submit" class="submit" name="submit">
+		<input type="reset" name="reset" class="reset">
+	</form>
+ </div>
+</body>
+
+</html>

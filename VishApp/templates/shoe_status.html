@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Status</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'vishalTailorsapp/css/show_status.css' %}" >
+</head>
+<body>
+	<table align="center">
+		<th id="s3">Status of your Dress</th>
+		<tr>
+			<td id="s1">Recipt No.: &nbsp;&nbsp; &nbsp; &nbsp;  {{cust.invoice}}</td>
+		</tr>
+		<tr>
+			<td id="s1">Nmae:&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {{cust.name}}</td>
+		</tr>
+		<tr>
+			<td id="s1">Order date:&nbsp; &nbsp; &nbsp; {{cust.oder_date|date:"d m Y"}}</td>
+		</tr>
+		<tr>
+			<td id="s1">Delever Date:&nbsp; &nbsp; {{cust.delevery_date|date:"d m Y"}}</td>
+		</tr>
+		<tr>	
+			<td id="s1">Shirt-Pant:&nbsp; &nbsp; {{cust.shirt}} {{cust.pant}}</td>
+		</tr>
+		<tr>	
+			<td id="s1">Total Amount:&nbsp; &nbsp; {{cust.Total_amount}}</td>
+		</tr>
+		<tr>
+			<td id="s1">Paid Amount:&nbsp; &nbsp; &nbsp; {{cust.recived_amount}}</td>
+		</tr>
+		<tr>
+			<td id="s1">Rem_Amount:&nbsp; &nbsp; &nbsp;  {{cust.rem_amount}}</td>
+		</tr>
+		<tr>
+			<td id="s2">Status:&nbsp;&nbsp;{{message}}</td>
+		</tr>
+	</table>
+	<a href="/"><input type="button" value="Back To Home"></a>
+</body>
+	
+</html>

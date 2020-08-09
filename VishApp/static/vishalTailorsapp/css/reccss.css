@@ -1,0 +1,36 @@
+*{
+			margin: 0px;
+			
+		}
+		.classR{
+			width: 100%;
+			height: auto;
+			margin: auto 2%;
+			display: -webkit-box;
+			padding: 20px;
+		}
+		.idi1{
+			padding: 20px;
+		}
+		#idi1{
+			height: auto;
+			width: 30%;
+			padding: 30px;
+			font-size: 30px;
+			border: 5px double red;
+			border-radius: 10px;
+			margin-left:1%;
+		}
+		#idi2{
+			height: auto;
+			width: 40%;
+			padding: 30px;
+			border: 5px double red;
+			margin-left: 2%;
+			border-radius: 10px;
+		
+		}
+		p{
+			padding: 10px;
+			font-size: 12px;
+		}

@@ -1,0 +1,291 @@
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: :border-box;
+	
+}
+body{
+	font-size: 20px;
+	overflow-x: hidden;
+	color: #555;
+	font-family: 'Flamenco', cursive;
+}
+
+.clearfix:after{
+	content:".";
+	visibility: hidden;
+	display: block;
+	height: 0px;
+	clear: both;
+}
+.row{
+	max-width: 1180px;
+	margin: 0 auto;
+	
+}
+
+
+.main-nav{
+	float: left;
+	margin-top: 60px;
+}
+.main-nav li{
+	display: inline-block;
+	list-style: none;
+	margin-left: 40px;
+	
+}
+.main-nav li a{
+	color: #fff;
+	font-size: 90%;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 100;
+}
+
+.main-nav li a:hover{
+	border-bottom: 2px solid #bf55ec;
+	padding: 5px;
+}
+
+.main-content-header{
+	width: 1180px;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+
+h1{
+	color: #fff;
+	font-size: 240%;
+	word-spacing: 5px;
+	letter-spacing: 3px;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-weight: lighter;
+}
+
+.btn{
+	display: inline-block;
+	padding: 10px 30px;
+	font-weight: lighter;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-radius: 200px;
+	transition: background-color 0.2s,border 0.2s color 0.2s; 
+}
+
+.btn-full{
+	background-color: transparent;
+	color: #bf55ec;
+	margin-right: 15px;
+	border:1px solid #bf55ec; 
+}
+
+.btn-nav{
+	background-color: transparent;
+	color: #fff;
+	margin-right: 15px;
+	border:1px solid #fff;
+	
+}
+
+.btn-full:hover{
+	background: white;
+}
+.btn-nav:hover{
+	background: #bf55ec;
+}
+
+.colorchange{
+	animation: colorchangerazz 1s infinite;
+}
+/*////////////////////////*/
+
+input[type=text] {
+    width: 60%;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+	border-radius: 10px;
+    
+}
+ #id20{
+    width: 150px;
+    padding: 7px 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+	border-radius: 10px;
+    
+}
+#id21{
+    width: 60px;
+    padding: 7px 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+	border-radius: 10px;
+    
+}
+
+h3{
+	color: black;
+	padding-top: 20px;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+	border-radius:10px;
+    cursor: pointer;
+    width: 60%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 8; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+	border-radius: 10px;
+    width:30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+@keyframes colorchangerazz{
+	0%{color:red;}
+	25%{color: #bf55ec;}
+	50%{color:white;}
+	100%{color:#bf55ec}
+}
+.mobile-icon{display: none;}
+
+/*///////////media query////////*/
+
+@media only screen and (max-width:1180px){
+	.main-content-header{
+		width: 100%;
+		padding:0 2%;
+	}
+}
+
+@media only screen and (max-width:998px){
+	h1{font-size: 200%;}
+}
+
+@media only screen and (max-width:768px){
+	h1{font-size: 180%;}
+	
+	.main-nav{display: none;}
+	
+	.mobile-icon{
+		display: inline-block;
+		color: #fff;
+		float: right;
+		margin-top: 30px;
+		margin-right: 20px;
+	}
+	
+	.main-nav {float: left;}
+	
+	
+	.main-nav li{
+		display: block;
+		margin-top: 10px;
+	}
+}
+
+@media only screen and (max-width:400px){
+	h1{font-size: 100%;}
+	.btn{margin-bottom: 10px;}
+	
+
+	
+	
+	
+	
+	/*newcostomer*/
+
+	

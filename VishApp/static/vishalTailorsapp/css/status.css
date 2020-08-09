@@ -1,0 +1,21 @@
+		body{
+			margin: 0px;
+		}
+		table{
+			align-content: center;
+			
+		}
+		.frm1{
+			align-content: center;
+			color: black;
+			font: 10px;
+		}
+		#st1{
+			color: blue;
+			font-size: 30px;
+			padding: 20px;
+		}
+		#st2{
+			padding: 5px;
+			
+		}

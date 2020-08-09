@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>update satus </title>
+	<link rel="stylesheet" type="text/css" href="{% static 'vishalTailorsapp/css/status.css' %}" >
+</head>
+<body>
+	<form class="frm1">
+	<table  align="center">
+		<th id="st1">status of product</th>
+		{% for result in value %}
+		<tr >
+			<td id="st2">{{result.0}}</td>
+			<td id="st2">{{result.1}}</td>
+			<td id="st2"><a href = '/Edit_page/?id={{result.0}}'>Edit</a></td>
+		</tr>
+		{% endfor %}
+		</table>
+	</form>
+</body>
+</html>

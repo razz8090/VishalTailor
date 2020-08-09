@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Change Password</title>
+<link rel="icon" href="kl.jpg" type="image/gif" sizes="16x16">
+<meta charshet="utf-8">
+
+<style>
+
+body {
+ font-family:Courier New;
+ margin:0;
+ background:url(FM8_4969.jpg);
+ background-repeat:no-repeat;
+ background-size:cover;
+ }
+ 
+ .box{
+ position:absolute;
+ top:50%;
+ left:50%;
+ transform:translate(-50%,-50%);
+ width:500px;
+ height:600px;
+ background:#fff;
+ padding:40px;
+ box-sizing:border-box;
+ border:1px solid rgba(0,0,0,.1);
+ box-shadow:0 5px 10px rgba(0,0,0,.2);
+ }
+
+h2{
+ font-family:Arial;
+ margin:0 0 40px;
+ padding:0;
+ color:#47d147;
+ }
+ 
+#a{
+ padding:10px 0;
+ margin-bottom:30px;
+ width:100%;
+ border-sizing:border-box;
+ border:none;
+ border-bottom:2px solid #999;
+ box-shadow:none;
+ outline:none;
+ }
+
+#b{
+font-weight:bold;
+color:black;
+font-size:19px
+} 
+
+#c{
+    background-color:#f44336;
+	width:90px;
+	margin-left:100px;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align:center;
+    text-decoration: 
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+	webkit-transition-duration: 0.4s;}
+	
+#d{
+    background-color: #4CAF50;
+    border: none;
+	width:90px;
+    color: white;
+    padding: 15px 15px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin:30px ;
+    cursor: pointer;
+	webkit-transition-duration: 0.4s;}
+   
+#a:focus{ border-bottom:2px solid #47d147;}
+#d:hover{box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24), 0 7px 5px 0 rgba(0,0,0,0.20);}
+#c:hover{box-shadow: 0 2px 6px 0 rgba(0,0,0,0.24), 0 7px 5px 0 rgba(0,0,0,0.20);}
+
+
+ 
+</style>
+</head>
+
+<body align="cente" background="bg.jg">
+<div class ="box">
+
+<h2 align="center">Change Password</h2>
+<form name="Change password" action="" method="post">
+<br>
+<div>
+<label id="b">Current Password</label>
+<input id="a" type="password" name="oldp" value=""/>
+</div>
+
+<div class="style">
+<label id="b">New Password</label>
+<input id="a" type="password" name="newp" value=""/>
+</div>
+
+<div>
+<label id="b">Confirm</label>
+<input id="a" type="password" name="confirmp" value=""/>
+</div>
+
+
+<input id="c" type="Submit" value="Done">
+<input id="d" type="Reset" value="Reset">
+
+</form> 
+</div>
+</body>
+</html>

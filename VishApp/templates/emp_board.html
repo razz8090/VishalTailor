@@ -1,0 +1,78 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="{% static 'vishalTailorsapp/css/Costomer_all.css' %}">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+       
+        
+
+    </head>
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>                        
+                </button>
+                <a class="navbar-brand" href="/">VishalTailor</a>
+                <a class="navbar-brand" href="/emp_form/">Add_Employee</a>
+              </div>
+              <div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                  <ul class="nav navbar-nav">
+                    <li style="margin-left: 700px; margin-top: 10px;"><input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.."></li>
+                    <li><a href="#">LogOut</a></li>
+                  </ul>
+                  
+                </div>
+              </div>
+            </div>
+          </nav>    
+    <form action="#">
+        <table id="myTable" style="margin-top: 55px">
+        {% for info in  emp %}
+          <tr class="header">
+            <td> {{info.id}}</td>
+            <td>{{info.name}}</td>
+            <td><a href="/emp_record/?id={{info.id}}">upload_record</a></td>
+          </tr>
+        {% endfor %}
+        </table> 
+    </form>
+    </body>
+    <script>
+        function myFunction() {
+          // Declare variables
+          var input, filter, table, tr, td,  i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+        
+          // Loop through all table rows, and hide those who don't match the search query
+        
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[1];
+                cd = tr[i].getElementsByTagName("td")[0];
+                if (td){
+                nvalue = cd.textContent || cd.innerText;
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1 || nvalue.toUpperCase().indexOf(filter) >-1) {
+                    tr[i].style.display = ""; 
+                } else {
+                    tr[i].style.display = "none";
+                }
+                }
+            }
+            }
+        
+            
+         
+        </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</html>

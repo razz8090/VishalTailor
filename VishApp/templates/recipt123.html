@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE  html>
+<html>
+<head>
+<title>recipt</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'vishalTailorsapp/css/reccss.css' %}">
+</head>
+<body>
+	<div class="classR">
+		<div id="idi1">
+			<h5>&nbsp;&nbsp;Shirt </h5>
+			<h6 align="right">{{shirt.invoice_s}}</h6>
+			<h6>{{shirt.sl}}</h6>
+			<h6>{{shirt.sm1}}</h6>
+			<h6>{{shirt.ss}}</h6>
+			<h6>{{shirt.sb}}</h6>
+			<h6>{{shirt.sm2}}</h6>
+			<h6>{{shirt.s_type}}</h6>
+			<br/><br/>
+		<hr/>
+			<br/><br/>
+			<h5>&nbsp;&nbsp;Pant</h5>
+			<h6 align="right">{{pant.invoice_p}}</h6>
+			<h6>{{pant.pl}}</h6>
+			<h6>{{pant.p_k}}</h6>
+			<h6>{{pant.ph1}}</h6>
+			<h6>{{pant.pg}}</h6>
+			<h6>{{pant.ph2}}</h6>
+			<h6>{{pant.p_type}}</h6>
+		</div>
+		<div id="idi2">
+			<h6>dir- RAJMANI PRAJAPATI</h6><h6 align="right">Mob No. 8007058099<br/> website: www.vishaltailors.com</h6>
+			<h1>VISHAL TAILORS</h1>
+			<h4 align="right">Near Bus Stand, Mokhada, Dist Palghar</h4>
+			<hr/><br/>
+			<h2>Name: {{cust.name}}</h2>  <h2 align="right">{{cust.invoice}}</h2> <h4 align="right">{{cust.oder_date|date:"d/m/Y"}}</h4>
+			<p style="font-size:15px">
+				Delevery date:&nbsp&nbsp&nbsp&nbsp<span style="font-size:20px">{{cust.delevery_date|date:"d/m/Y"}}</span><br/> 
+				
+				PANT:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{cust.pant}} <br/>
+				SHIRT:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{cust.shirt}}<br/>
+				Total Amount:&nbsp&nbsp&nbsp&nbsp{{cust.Total_amount}}<br/>
+				Advance:&nbsp&nbsp&nbsp&nbsp{{cust.recived_amount}}<br/>
+				Balance:&nbsp&nbsp&nbsp&nbsp{{cust.rem_amount}}<br/>
+			</p>
+		<br/><br/><br/>
+		<h6 align="right">Singnature<br/>---------------</h6>
+		<hr/>
+		<p>
+			Notice:-<br/>
+			1.कपडे लेने के समय, बिल साथ ले आये|<br/>
+			2.बिजली और किसी तकानिकी कारनो से कपडा लेट मिल सकता ही जिसके लिए कोई तकरार नहीं चलेगी।  <br/>
+			3.कपडा एक महीने के अंदर ले जाए, वरना  हमारी कोई गारेंटी नहीं होगी।</p>
+		
+		</div>
+		<input type="button" onClick="javascript:window.print()" value="print">
+		<a href='/edit_info/?id={{cust.invoice}}'><input type="button" value="Edit"></a>
+		<a href="/cust_form/"><input type="button" value="new"></a>
+		
+	</div>
+	
+</body>
+</html>

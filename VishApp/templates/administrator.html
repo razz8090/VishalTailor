@@ -1,0 +1,86 @@
+{% load static %}
+<DOCTYPE!html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'vishalTailorsapp/css/admin.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<script type="text/javascript">
+		function slideshwo(){
+			var x=document.getElementById('check-class');
+			if(x.style.display === "none"){
+				x.style.display = "block";
+			}else{
+				x.style.display="none";
+			}
+		}
+	</script>
+	<style>
+            header{
+	background-image: url("{% static 'vishalTailorsapp/img/back2.png' %}");
+	height: 100vh;
+	background-repeat: none;
+	background-size: cover;
+        }
+	</style>
+</head>
+<body>
+	
+	<header>
+		<nav>
+			
+			<div class="row clearfix">
+				<ul class="main-nav animated slideInDown" id="check-class" >
+					<li>	<form>
+			
+			</form></li>
+					<li><a href="/show_update_list/">Update Status</a></li>
+					<li><a href="/customer_list/" >Customer list</a></li>
+					<li><a href="#" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"></a></li>
+					<li><a href="#"></a></li>
+					<li><a href="#"></a></li>
+				</ul>
+					<a href="#" class="mobile-icon" onhref="#"onclick="slideshwo()"><i class="fa fa-bars"></i></a>
+			</div>
+		</nav>
+			<div class="main-content-header">
+				 <h1 align="center"><span class="colorchange">Welcome to the Boy's zone!<br/>By<br/> RAZZ, &nbsp; SID, &nbsp; AKASH <br></span>MEN'S CLOTHING.
+		<br>
+		</h1>
+		<a href="/cust_form/" class="btn btn-full">new Customer</a>
+		<a href="/emp_acc/" class="btn btn-nav">Employee</a>
+		</div>
+	</header>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" align="center" action="/action_page.php">
+	<h3>CHECK YOUR STATUS</h3>
+    <div class="container">
+      <input type="text" text-align="center" placeholder="Enter_Booklet_No." name="bookletNo" required>
+       
+      <button type="submit">Enter</button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+    </div>
+  </form>
+</div>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</body>
+	
+</html>

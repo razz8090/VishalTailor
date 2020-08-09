@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'vishalTailorsapp/css/loincss.css' %}">
+<title>log In</title>
+<link rel="icon" href="{% static 'vishalTailorsapp/img/kl.jpg' %}" type="image/gif" sizes="16x16">
+<meta charshet="utf-8">
+</head>
+
+<body align="cente" background="http://127.0.0.1:8000{% static 'vishalTailorsapp/img/backgr.jpg' %}">
+
+<div class ="box"> 
+      
+<br><br>
+ <h2 align="center">Login In</h2>
+
+<form name="Change password" action="/admin_log_in/" method="post" onsubmit="return validateemail">
+
+<label id="b">Email</label><br />
+<input id="a" name="email" required=""  type="email"/>
+<br>
+<label id="b">Password</label>
+<input id="a" type="password"   required="" name="password" value=""/>
+<br><h3 align="center" text-color="red">{{messege}}</h3>
+<br><br>
+<input id="c" type="Submit" value="Done">
+<br><br><br>
+<a href="">Forget Password |</a><span><a href="sign up">| Sign Up</a></span>
+
+
+</form> 
+</div>
+</body>
+</html>

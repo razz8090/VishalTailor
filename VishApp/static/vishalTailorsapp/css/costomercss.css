@@ -1,0 +1,103 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: :border-box;
+	
+}
+body{
+	font-size: 20px;
+	overflow-x: hidden;
+	color: black;
+	font-family: 'Flamenco', cursive;
+}
+
+input[type=text]{
+	text-align: center;
+}
+
+td,tr{
+	display: block;
+	padding: 3px;
+	padding-left: 20px;
+}
+	
+.container{
+	width: 90%;
+	height: auto;
+	margin: 0% auto 0% auto;
+	border: 1px solid black;
+	
+
+	}
+
+h1{
+	background-color: darkorchid;
+	width: 100%;
+}
+h3{
+	float: none;
+	margin: 5px;
+}
+h4{
+	float: right;
+	margin-right: 10px;
+}
+#div5{
+	float: right;
+	margin-top: 10px;
+	width: 40%;
+	border: 1px solid black;
+	margin: 10% auto 25 auto;
+}
+#div1{
+	float: left;
+	margin-top: 10px;
+	width: 40%;
+	border: 1px solid black;
+	margin: 10% auto 25 auto;
+}
+
+.div3{
+	width: 70%;
+	height: auto;
+	margin: 0% auto 15% auto;
+	border: 1px solid black;
+	background-color: #f1f1f1;
+}
+fieldset{
+	padding: 25px;
+	margin: 25px;
+	border: 1px solid black;
+}
+t{
+	margin-left: 25px;
+}
+.submit{
+	float: right;
+	width: 40%;
+	height: 40px;
+	margin: 10px;
+	border-radius: 10px;
+}
+.reset{
+	height: 40px;
+	width: 40%;
+	margin: 10px;
+	border-radius: 10px;
+}
+#paid{
+	margin-left: 25px;
+	margin-top: 10px;
+}
+#dis1{
+        background-color: none;
+		pointer-events: all;
+}
+#dis2{
+        background-color: none;
+        pointer-events: all;
+}
+#dis3{
+        background-color: red;
+        pointer-events: none;
+}

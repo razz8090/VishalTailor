@@ -1,0 +1,20 @@
+		body{
+			margin: opx;
+			
+		}
+		#s1{
+			color: blueviolet;
+			padding: 5px;
+			font-size: 20px;
+		}
+		#s2{
+			color: red;
+			font-size: 25px;
+			padding: 20px;
+		}
+		#s3{
+			color: black;
+			font-size: 30px;
+			margin: 5% 45%;
+			
+		}

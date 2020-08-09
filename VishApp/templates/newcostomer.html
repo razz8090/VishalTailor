@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{% static 'vishalTailorsapp/css/costomercss.css' %}">
+<link href="https://fonts.googleapis.com/css?family=Flamenco" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+</style>
+</head>
+<body>
+ <div class="div3">
+	<form action="/submit_detils/" method="post">
+	 <h1 align="center">new customer detailse</h1>
+		<div class="container">
+		<div id="div1">
+			<select name="S_dsbl">
+					<option value="EnblS" selected>Enable</option>
+					<option value="DsblS">Disable</option>
+				</select>
+			<table id="dis1">
+				<h3>SHIRT</h3>
+				
+				<tr>
+					<td><input id="c1" type="text" name="L1" placeholder="L" maxlength="5" size="4"></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="M1" placeholder="M" maxlength="5" size="4"></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="S1" placeholder="S" maxlength="5" size="4"></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="B1" placeholder="B" maxlength="5" size="4"></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="M2" placeholder="M" maxlength="5" size="4"></td>
+				</tr>
+				<tr>
+					<td>
+					<select name="types">
+						<option value="">select</option>
+						<option value="apple">Apple</option>
+						<option value="short">shoot</option>
+					</select>
+						</td>
+				</tr>
+			</table>
+		</div>
+		<div id="div5">
+			<table id="dis2">
+				<select name="P_Dsbl">
+					<option value="EnblP" selected>Enable</option>
+					<option value="DsblP">Disable</option>
+				</select>
+				<h3>PANT</h3>
+				
+				<tr>
+					<td><input type="text" name="L2" placeholder="L" maxlength="5" size="4"></td>
+				</tr>
+					<td><input type="text" name="K2" placeholder="K" maxlength="5" size="4"></td>
+				<tr>
+					<td><input type="text" name="H1" placeholder="H" maxlength="5" size="4"></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="G1" placeholder="G" maxlength="5" size="4"></td>
+				</tr>
+				<tr>
+					<td><input type="text"  name="H3" placeholder="H" maxlength="5" size="4"></td>
+				</tr>
+				<tr>
+				<td>
+					<select name="typep">
+						<option value="">select</option>
+						<option value="cross">cross cut</option>
+						<option value="narrow">narrow</option>
+						<option value="saada">Saada</option>
+					</select>	
+				</td>
+				</tr>
+			</table>
+		</div>
+		</div>
+		<div id="div4">
+			<table>
+				<fieldset>
+					<legend align="center">Recipt</legend>
+					<h2 align="center">Vishal Tailor</h2>
+					<textarea name="name" id="paid" rows="2" cols="40" id="comments" placeholder="Enter name here" required></textarea>
+					<br/>
+					<h4>Date</h4>
+					<t>Shirt</t>
+					<input type="text" id="paid" name="shirt" maxlenth="2" size="1" value="1" required>
+					<t>Pant</t>
+					<input type="text" id="paid" name="pant" maxlenth="2" size="1" VALUE="1"><br>
+					<t>Total Amount</t>
+					<input type="text" id="Tamount" name="toal" maxlength="6" required><br/>
+					<t>Date</t><input type="date" id="paid" name="rdate" required><br>
+					<t>Paid</t><input name="paid" id="paid" text="text" maxlenth="5" size="5" required>
+					<t>Remaining amount</t>
+ 				</fieldset>
+			</table>
+		</div>
+		<input type="submit" class="submit" name="submit">
+		<input type="reset" name="reset" class="reset">
+	</form>
+ </div>
+</body>
+
+</html>
